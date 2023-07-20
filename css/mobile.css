@@ -1,4 +1,4 @@
-/* global */
+/* Global */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,9 +9,11 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 body {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100vw;
+    min-width: 320px;
     height: 100vh;
     font-size: 16rem;
 }
@@ -19,16 +21,16 @@ a {
     text-decoration: none;
 }
 
-/* header */
+/* Header */
 header {
     width: 100%;
-    height: 60rem;
+    height: 60px;
 }
 header nav {
     display: flex;
     justify-content: flex-end;
     height: 100%;
-    padding: 0 10rem;
+    padding: 0 10px;
 }
 header nav .nav-right-section {
     width: auto;
@@ -39,13 +41,16 @@ header nav .nav-right-section {
     align-items: center;
 }
 nav .nav-right-section li {
+    margin: 0 10px;
+}
+nav .nav-right-section a {
+    display: flex;
     color: #000000;
     font-size: 13rem;
-    margin: 0 10rem;
 }
 header .nav-right-section .menu-icon-container {
-    width: 16rem;
-    height: 16rem;
+    width: 16px;
+    height: 16px;
 }
 nav .nav-right-section .menu-icon {
     width: 100%;
@@ -55,36 +60,47 @@ nav .nav-right-section .profile-photo {
     border-radius: 50%;
 }
 
-/* main */
+/* Main */
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 35px;
     width: 100%;
 }
 
-/* main logo */
+/* Main logo */
 main .main-logo {
-    margin-top: 100rem;
-    margin-bottom: 35rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+main .main-logo a {
+    width: 80%;
+    max-width: 300px;
 }
 main .main-logo img {
-    width: 300rem;
+    width: 100%;
 }
 
-/* main input */
+/* Main input */
 main .main-input {
-    margin-bottom: 35rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 20px;
 }
 main .main-input-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 584px;
+    min-height: 44px;
+    padding: 0px 14px;
     border: 1px solid #dfe1e5;
-    border-radius: 24rem;
-    width: 580rem;
-    min-height: 44rem;
-    padding: 0rem 14rem;
+    border-radius: 24px;
 }
 main .main-input-container:hover {
     box-shadow: 0 1px 6px rgba(32,33,36,.28);
@@ -92,8 +108,8 @@ main .main-input-container:hover {
 }
 main .main-input .search-icon-container {
     display: inline-block;
-    width: 20rem;
-    height: 20rem;
+    width: 20px;
+    height: 20px;
 }
 main .main-input .search-icon {
     width: 100%;
@@ -103,21 +119,20 @@ main .main-input input {
     border: none;
     outline: none;
     font-size: 16rem;
-    font-weight: 400;
     line-height: 28rem;
-    width: 85%;
+    width: 90%;
 }
 main .main-input .micro-icon-container {
     display: inline-block;
-    width: 24rem;
-    height: 24rem;
+    width: 24px;
+    height: 24px;
 }
 main .main-input .micro-icon {
     width: 100%;
     height: 100%;
 }
 
-/* main buttons */
+/* Main buttons */
 main .main-buttons {
     display: flex;
     justify-content: center;
@@ -126,55 +141,59 @@ main .main-buttons {
 main .main-buttons button {
     background-color: #f8f9fa;
     border: none;
-    border-radius: 4rem;
+    border-radius: 4px;
     cursor: pointer;
-    height: 36rem;
-    padding: 0 16rem;
+    height: 36px;
+    padding: 0 16px;
     text-align: center;
-    margin: 14rem 6rem;
+    margin: 0 6px;
 }
 main .main-buttons button:hover{
     box-shadow: 0 1px 1px rgba(0,0,0,.1);
-    background-color: #f8f9fa;
     border: 1px solid #dadce0;
     color: #202124;
 }
 
-/* footer */
+/* Footer */
 footer {
-    background-color: #f2f2f2;
     display: flex;
     flex-direction: column;
-    padding: 0 20rem;
+    padding: 0 16px;
     width: 100%;
-    height: 95rem;
+    height: auto;
+    background-color: #f2f2f2;
 }
 footer .first-section {
-    border-bottom: 1px solid #dadce0;
     display: flex;
     align-items: center;
-    height: 100%;
+    width: 100%;
+    height: auto;
+    min-height: 47.5px;
+    border-bottom: 1px solid #dadce0;
 }
 footer .first-section p {
+    padding: 0 10px;
     color: #70757a;
     font-size: 15rem;
-    padding: 0 10rem;
 }
 footer .second-section {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap;
-    height: 100%;
+    width: 100%;
+    height: auto;
+    min-height: 47.5px;
 }
 footer .second-section ul {
     display: flex;
     align-items: center;
     height: 100%;
     list-style: none;
+    padding: 8px 0;
 }
 footer .second-section a {
+    padding: 15px;
     color: #70757a;
     font-size: 14rem;
-    padding: 15rem;
 }
