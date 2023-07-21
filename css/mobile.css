@@ -109,6 +109,7 @@ main .main-input-container:hover {
 main .main-input .search-icon-container {
     display: inline-block;
     width: 20px;
+    min-width: 20px;
     height: 20px;
 }
 main .main-input .search-icon {
@@ -125,6 +126,7 @@ main .main-input input {
 main .main-input .micro-icon-container {
     display: inline-block;
     width: 24px;
+    min-width: 24px;
     height: 24px;
 }
 main .main-input .micro-icon {
@@ -158,6 +160,8 @@ main .main-buttons button:hover{
 footer {
     display: flex;
     flex-direction: column;
+    position: relative;
+    bottom: 6px;
     padding: 0 16px;
     width: 100%;
     height: auto;
