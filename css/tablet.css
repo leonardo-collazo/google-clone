@@ -1,7 +1,4 @@
 /* Footer */
-footer {
-  position: static;
-}
 footer .second-section {
   flex-direction: row;
 }
